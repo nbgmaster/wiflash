@@ -1,0 +1,26 @@
+
+# 403 Error-Message
+ErrorDocument 403 "403 Forbidden
+
+# 403 good bye
+BrowserMatch ^CoolBot evil
+BrowserMatch internetseer evil
+BrowserMatch "^Mozilla\/4\.06 \(Win95; I\)$" evil
+BrowserMatchNoCase msnbot evil
+
+<Limit GET POST HEAD>
+   Order Allow,Deny
+   Allow from all
+   Deny from env=evil
+</Limit> 
+
+AddType application/x-httpd-php php php4 php3 html htm
+
+Options +FollowSymlinks
+RewriteEngine on
+
+
+RewriteRule ^([a-z0-9_]+)/([a-z0-9_]+)(\.html|/)(\/)?$ index.php?module=$1&section=$2 [QSA,NC]
+RewriteRule ^([a-z0-9_]+)/([a-z0-9_]+)(\.htm|/)(\/)?$ index.php?module=$1&section=$2 [QSA,NC]
+
+RewriteRule ^([a-z0-9_]+)(\/)?$ index.php?module=$1 [QSA,NC]
