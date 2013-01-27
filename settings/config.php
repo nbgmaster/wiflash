@@ -111,8 +111,8 @@
          
      $c_time = date("H:i",$timestamp);
      $c_date = date("d.m.Y",$timestamp);
-     $Fyear      = date("Y",$timestamp);
-     
+     $Fyear  = date("Y",$timestamp);
+   
      define("C_YEAR", date("Y",$timestamp));
      
   /******************************************/

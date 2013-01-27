@@ -120,6 +120,7 @@ UpgradeLog*.XML
 ## Windows
 ############
 
+templates_c
 # Windows image file caches
 Thumbs.db
 
