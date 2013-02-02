@@ -1,12 +1,7 @@
 <?php
 
-  error_reporting(E_ALL);
-
   /* Prevent Header Output Error */
-        
-     session_start();
-     ob_start();
-     
+             
      //$expires = 60*60*24*365;
      //header("Cache-Control: maxage=".$expires);
      //header('Expires: ' . gmdate('D, d M Y H:i:s', time()) . ' GMT');
@@ -16,6 +11,10 @@
      //header("Cache-Control: no-cache, must-revalidate");
      //header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
+     
+  error_reporting(E_ALL);
+     
+     
   /******************************************/
   
      $start = microtime(true); 
@@ -204,7 +203,7 @@
                                
  /******************************************/
 
-
+echo $lang_active;
   /* Get texts */
   
     /* TODO ::: PUT INTO CACHE !!! */
